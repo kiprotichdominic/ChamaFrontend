@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Chama"
+    }
+  },
+  "defaultProject": "Chama",
+  "cli": {
+    "analytics": false
+  }
 }

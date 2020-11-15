@@ -1,0 +1,30 @@
+<div class="group">
+    <div class="create-group">
+        <div class="card" style="height: 24rem; width: 40vw;">
+            <div class="card-body">
+              <h4 class="card-title h4 mb-4">Create Group</h4>
+                <!-- Default form subscription -->
+                <form [formGroup]="createGroupForm" (ngSubmit)="onSubmit()" class="text-center border border-light p-5" action="#!">
+                    <div class="form-group">
+                        <input type="text" formControlName="name" class="form-control mb-4" placeholder="Group Name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                            <div *ngIf="f.name.errors.required">Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" formControlName="numberOfMembers" class="form-control mb-4" placeholder="Number Of Members" [ngClass]="{ 'is-invalid': submitted && f.numberOfMembers.errors }" />
+                        <div *ngIf="submitted && f.numberOfMembers.errors" class="invalid-feedback">
+                            <div *ngIf="f.numberOfMembers.errors.required">This Field is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit">
+                            <!-- <span class="spinner-border spinner-border-sm mr-1"></span> -->
+                            Create Group
+                        </button>
+                    </div>
+                </form>
+            </div>
+          </div>
+    </div>
+</div>
